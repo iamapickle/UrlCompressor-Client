@@ -78,6 +78,7 @@ const AuthPage = () => {
                     type="text"
                     name="name"
                     placeholder="John Doe"
+                    required="required"
                     onChange={(e) => {
                       context.createMessage(false, null);
                       changeName(e.target.value);
@@ -103,6 +104,7 @@ const AuthPage = () => {
                   type="password"
                   name="password"
                   placeholder="*****"
+                  pattern="(?=.*\d)(?=.*[a-z])(?=.*[~!@#$%^&*_/+=`|\\(){}[\]:;’<;>;,.?\-_])(?=.*[A-Z]).{8,}"
                   onChange={(e) => {
                     context.createMessage(false, null);
                     changePassword(e.target.value);
